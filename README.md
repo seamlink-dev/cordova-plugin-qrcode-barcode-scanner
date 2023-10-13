@@ -9,14 +9,13 @@ Follows the [Cordova Plugin spec](https://cordova.apache.org/docs/en/latest/plug
 
 ## Installation
 
-
 This requires phonegap 7.1.0+ ( current stable v8.0.0 )
 
     phonegap plugin add phonegap-plugin-barcodescanner
 
 It is also possible to install via repo url directly ( unstable )
 
-    phonegap plugin add https://github.com/phonegap/phonegap-plugin-barcodescanner.git
+    phonegap plugin add https://github.com/seamlink-dev/phonegap-plugin-barcodescanner.git
 
 Optional variables:
 This plugin requires the Android support library v4. The minimum version is `24.1.0`. Default value is `27.+`.  Check out the latest version [here](https://developer.android.com/topic/libraries/support-library/revisions.html).
@@ -27,56 +26,35 @@ phonegap plugin add phonegap-plugin-barcodescanner --variable ANDROID_SUPPORT_V4
 
 - Android
 - iOS
-- Windows (Windows/Windows Phone 8.1 and Windows 10)
-- Browser
 
 Note: the Android source for this project includes an Android Library Project.
 plugman currently doesn't support Library Project refs, so its been
 prebuilt as a jar library. Any updates to the Library Project should be
 committed with an updated jar.
 
-Note: Windows 10 applications can not be build for `AnyCPU` architecture, which is default for Windows platform. If you want to build/run Windows 10 app, you should specify target architecture explicitly, for example (Cordova CLI):
-
-```
-cordova run windows -- --archs=x86
-```
-
-### PhoneGap Build Usage
-
-Add the following to your config.xml:
-
-```
-<!-- add a version here, otherwise PGB will use whatever the latest version of the package on npm is -->
-<plugin name="phonegap-plugin-barcodescanner" />
-```
-On PhoneGap Build if you're using a version of cordova-android of 4 or less, ensure you're building with gradle:
-```
-<preference name="android-build-tool" value="gradle" />
-```
-
 ## Using the plugin ##
 The plugin creates the object `cordova.plugins.barcodeScanner` with the method `scan(success, fail)`.
 
 The following barcode types are currently supported:
 
-|  Barcode Type | Android | iOS | Windows  |
-|---------------|:-------:|:---:|:--------:|
-| QR_CODE       |    ✔    |  ✔  |     ✔    |
-| DATA_MATRIX   |    ✔    |  ✔  |     ✔    |
-| UPC_A         |    ✔    |  ✔  |     ✔    |
-| UPC_E         |    ✔    |  ✔  |     ✔    |
-| EAN_8         |    ✔    |  ✔  |     ✔    |
-| EAN_13        |    ✔    |  ✔  |     ✔    |
-| CODE_39       |    ✔    |  ✔  |     ✔    |
-| CODE_93       |    ✔    |  ✔  |     ✔    |
-| CODE_128      |    ✔    |  ✔  |     ✔    |
-| CODABAR       |    ✔    |  ✖  |     ✔    |
-| ITF           |    ✔    |  ✔  |     ✔    |
-| RSS14         |    ✔    |  ✖  |     ✔    |
-| PDF_417       |    ✔    |  ✔  |     ✔    |
-| RSS_EXPANDED  |    ✔    |  ✖  |     ✖    |
-| MSI           |    ✖    |  ✖  |     ✔    |
-| AZTEC         |    ✔    |  ✔  |     ✔    |
+|  Barcode Type | Android | iOS |
+|---------------|:-------:|:---:|
+| QR_CODE       |    ✔    |  ✔  |
+| DATA_MATRIX   |    ✔    |  ✔  |
+| UPC_A         |    ✔    |  ✔  |
+| UPC_E         |    ✔    |  ✔  |
+| EAN_8         |    ✔    |  ✔  |
+| EAN_13        |    ✔    |  ✔  |
+| CODE_39       |    ✔    |  ✔  |
+| CODE_93       |    ✔    |  ✔  |
+| CODE_128      |    ✔    |  ✔  |
+| CODABAR       |    ✔    |  ✖  |
+| ITF           |    ✔    |  ✔  |
+| RSS14         |    ✔    |  ✖  |
+| PDF_417       |    ✔    |  ✔  |
+| RSS_EXPANDED  |    ✔    |  ✖  |
+| MSI           |    ✖    |  ✖  |
+| AZTEC         |    ✔    |  ✔  |
 
 `success` and `fail` are callback functions. Success is passed an object with data, type and cancelled properties. Data is the text representation of the barcode data, type is the type of barcode detected and cancelled is whether or not the user cancelled the scan.
 
@@ -144,12 +122,6 @@ To add this entry you can use the `edit-config` tag in the `config.xml` like thi
     <string>To scan barcodes</string>
 </edit-config>
 ```
-
-## Windows quirks ##
-
-* Windows implementation currently doesn't support encode functionality.
-
-* On Windows 10 desktop ensure that you have Windows Media Player and Media Feature pack installed.
 
 ## Thanks on Github ##
 
