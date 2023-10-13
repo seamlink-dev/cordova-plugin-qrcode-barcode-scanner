@@ -1,26 +1,16 @@
-# PhoneGap Plugin BarcodeScanner
+# Cordova Plugin Qrcode Barcode Scanner
 ================================
-
-[![Build Status](https://travis-ci.org/phonegap/phonegap-plugin-barcodescanner.svg)](https://travis-ci.org/phonegap/phonegap-plugin-barcodescanner)
-
-Cross-platform BarcodeScanner for Cordova / PhoneGap.
-
-Follows the [Cordova Plugin spec](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html), so that it works with [Plugman](https://github.com/apache/cordova-plugman).
 
 ## Installation
 
-This requires phonegap 7.1.0+ ( current stable v8.0.0 )
+Install via repo url directly ( unstable )
 
-    phonegap plugin add phonegap-plugin-barcodescanner
-
-It is also possible to install via repo url directly ( unstable )
-
-    phonegap plugin add https://github.com/seamlink-dev/phonegap-plugin-barcodescanner.git
+    phonegap plugin add https://github.com/seamlink-dev/cordova-plugin-qrcode-barcode-scanner.git
 
 Optional variables:
 This plugin requires the Android support library v4. The minimum version is `24.1.0`. Default value is `27.+`.  Check out the latest version [here](https://developer.android.com/topic/libraries/support-library/revisions.html).
 ```
-phonegap plugin add phonegap-plugin-barcodescanner --variable ANDROID_SUPPORT_V4_VERSION="27.1.1"
+phonegap plugin add https://github.com/seamlink-dev/cordova-plugin-qrcode-barcode-scanner.git --variable ANDROID_SUPPORT_V4_VERSION="27.1.1"
 ```
 ### Supported Platforms
 
