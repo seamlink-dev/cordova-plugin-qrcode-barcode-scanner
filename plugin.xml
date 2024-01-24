@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-qrcode-barcode-scanner" version="8.1.1-dev">
+    id="cordova-plugin-qrcode-barcode-scanner" version="9.0.0">
     <name>BarcodeScanner</name>
     <description>You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application.</description>
     <license>MIT</license>
     <repo>https://github.com/seamlink-dev/cordova-plugin-qrcode-barcode-scanner</repo>
     <issue>https://github.com/seamlink-dev/cordova-plugin-qrcode-barcode-scanner/issues</issue>
     <engines>
-        <engine name="cordova" version=">=7.1.0"/>
-        <engine name="cordova-android" version=">=6.3.0"/>
+        <engine name="cordova" version=">=12.0.0"/>
+        <engine name="cordova-android" version=">=12.0.0"/>
     </engines>
     <js-module src="www/barcodescanner.js" name="BarcodeScanner">
         <clobbers target="cordova.plugins.barcodeScanner"/>
