@@ -1,5 +1,10 @@
 # Change Log
 
+## [Unreleased] v.9.0.0
+- bump version of plugin
+- fix deprecated methods
+- removed deprecated platforms
+
 ## v8.1.0
 
 - Don't use `dispatch_sync` if already in the main thread ([#797](https://github.com/phonegap/phonegap-plugin-barcodescanner/pull/797)) [view commit](https://github.com/phonegap/phonegap-plugin-barcodescanner/commit/d45ffc32c03e489b6bb3da8a29d950e7a89f4812)
